@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>QRコード表示ページ</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    #qr {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>QRコード生成</h1>
+  <p>下のテキストをQRコードにします。</p>
+
+  <input id="text" type="text" value="https://example.com" size="40">
+  <button onclick="generateQR()">生成</button>
+
+  <div id="qr"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script>
+    function generateQR() {
+      const text = document.getElementById('text').value;
+      const qrContainer = document.getElementById('qr');
+      qrContainer.innerHTML = "";
+      new QRCode(qrContainer, {
+        text: text,
+        width: 256,
+        height: 256,
+      });
+    }
+    generateQR();
+  </script>
+</body>
+</html>
