@@ -16,4 +16,6 @@ const headerMessage=document.querySelector('header div');if(headerMessage)header
 const h206=document.querySelector('header h1'),sub206=document.querySelector('header div');if(h206)h206.textContent='10×10クロスワード　②';if(sub206)sub206.textContent='';
 </script><style>
 .extract{display:flex!important;flex-wrap:nowrap!important;justify-content:center!important;align-items:flex-start!important;gap:5px!important;clear:both!important}.extract div{display:flex!important;flex:0 0 42px!important;width:42px!important;min-width:42px!important;height:50px!important;min-height:50px!important;box-sizing:border-box!important;flex-direction:column!important;align-items:stretch!important;border:2px solid #5942a6!important;background:#fff!important}.extract small{display:block!important;height:15px!important;line-height:15px!important;text-align:center!important}.extract input{display:block!important;width:100%!important;height:31px!important;min-height:31px!important;box-sizing:border-box!important;border:0!important;text-align:center!important;font-size:22px!important}
-</style></html>
+</style><script>
+const extract206=document.querySelector('#extract');if(extract206&&!extract206.querySelector('.ticket-label')){const ticket=document.createElement('span');ticket.className='ticket-label';ticket.textContent='券';ticket.style.cssText='display:flex;align-items:center;height:50px;font-size:22px;font-weight:bold;margin-left:2px';extract206.append(ticket)}
+</script></html>
