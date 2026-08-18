@@ -23,4 +23,6 @@ n.splice(0,n.length,...page210N);grid.innerHTML='';for(let rr=0;rr<10;rr++)for(l
 </script><script>
 // hを同じ列（2列目）の最下段へ移動
 const oldH=[...document.querySelectorAll('#grid .tag')].find(x=>x.textContent==='h');const bottomH=document.querySelector('#grid').children[91];if(oldH&&bottomH){oldH.remove();const newH=document.createElement('span');newH.className='tag';newH.textContent='h';bottomH.prepend(newH)}
+</script><script>
+const h210=document.querySelector('header h1'),sub210=document.querySelector('header div');if(h210)h210.textContent='10×10クロスワード　①';if(sub210)sub210.textContent='';
 </script></html>
